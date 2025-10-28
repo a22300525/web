@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Cultura en México</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --nav-height: 72px;
+      --accent: #2e473b;
+      --bg-dark: #111111;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: #fff;
+      padding-top: var(--nav-height); /* espacio para navbar fixed */
+    }
+
+
+/* Recuadro de texto en la sección INICIO */
+#inicio .container {
+  background-color: #2e473b; /* verde */
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Recuadros (cards) en SOBRE MÉXICO */
+#sobremexico .card {
+  background-color: #2e473b !important; /* verde */
+}
+
+
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--accent);
+      height: var(--nav-height);
+    }
+
+    /* Centrar los items del menú */
+    .navbar .navbar-collapse {
+      justify-content: center;
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: 700;
+    }
+
+    /* SECCIÓN INICIO (texto izquierda - imagen derecha) */
+    #inicio {
+      padding: 80px 0;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+    }
+
+    #inicio .titulo {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    #inicio .subtitulo {
+      color: #bfc9c1;
+      margin-top: 0.6rem;
+    }
+
+    /* Acomodar imagen bandera */
+    .bandera {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+
+    /* Parallax para introducción */
+    #introduccion {
+      position: relative;
+      color: #fff;
+      background-image: url('https://www.mexicodesconocido.com.mx/wp-content/uploads/2021/06/cultura-de-mexico-depositphotos.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* parallax en escritorio */
+      padding: 90px 0;
+    }
+
+    /* capa oscura para mejorar contraste del texto */
+    #introduccion .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    #introduccion h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Cards sección Sobre México / Comida */
+    section .card {
+      background: rgba(33, 54, 46, 0.12);
+      color: #fff;
+      border: 0;
+    }
+
+    .card .card-body p, .card .card-body li {
+      color: #e6efe6;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: var(--accent);
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      #inicio { padding: 40px 0; }
+      .bandera { margin-top: 1rem; display: block; margin-left: auto; margin-right: auto; }
+      .navbar .navbar-toggler { border-color: rgba(255,255,255,0.15); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">Cultura Mexicana</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <p class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></p>
+          <p class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></p>
+          <p class="nav-item"><a class="nav-link" href="#sobremexico">Sobre México</a></p>
+          <p class="nav-item"><a class="nav-link" href="#comida">Comida</a></p>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INICIO: texto a la izquierda, bandera a la derecha -->
+  <section id="inicio">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Texto izquierdo -->
+        <div class="col-md-7">
+          <h1 class="titulo">La Cultura en México</h1>
+          <p class="subtitulo">Página creada con amor hacia México.</p>
+          
+        </div>
+
+        <!-- Bandera derecha -->
+        <div class="col-md-5 text-md-end">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Bandera de México" class="bandera">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCCIÓN con Parallax -->
+  <section id="introduccion">
+    <div class="container">
+      <div class="overlay">
+        <h2>Introducción</h2>
+        <p>
+          México es un país lleno de historia, tradiciones y diversidad. Su cultura es el resultado de la fusión entre
+          las antiguas civilizaciones prehispánicas como la mexica, maya, zapoteca y tolteca, y la herencia española que llegó
+          en el siglo XVI. De esta mezcla surgió una identidad única, reconocida en todo el mundo por su color, su sabor y su alegría.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- SOBRE MÉXICO -->
+<section id="sobremexico" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Sobre México</h2>
+
+    <!-- ARTE -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div class="card p-4 bg-accent text-white">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Arte</h4>
+            <p>El arte mexicano es reconocido por su colorido y simbolismo.
+<ul>
+              <li>Pintura: Destacan artistas como Frida Kahlo, Diego Rivera y José Clemente Orozco.</li>
+              <li>Artesanías: En cada estado se elaboran piezas únicas: alebrijes en Oaxaca, talavera en Puebla, textiles bordados en Chiapas y rebozos en Michoacán.</li>
+        
+            </ul>
+
+      
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="catrina.PNG" class="img-fluid rounded shadow" alt="Arte Mexicano">
+      </div>
+    </div>
+
+    <!-- TRADICIONES -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div class="card p-4 bg-accent text-white">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Tradiciones</h4>
+            <p><strong>Día de Muertos:</strong>  Celebrado el 1 y 2 de noviembre, es una de las festividades más emblemáticas del país. Las familias colocan altares para honrar a sus seres queridos fallecidos.</p>
+            <p><strong>Grito de Independencia:</strong> Cada 15 de septiembre, los mexicanos celebran la independencia del país con fiestas, fuegos artificiales y el tradicional “¡Viva México!” que se da en plazas y hogares.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="miguel.PNG" class="img-fluid rounded shadow" alt="Tradiciones Mexicanas">
+      </div>
+    </div>
+
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div class="card p-4 bg-accent text-white">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Musica y Danza</h4>
+<ul>
+              <li>Mariachi: Patrimonio cultural de la humanidad, originario de Jalisco.</li>
+              <li>Son jarocho, norteño, rancheras, corridos y banda sinaloense son otros géneros populares. La danza también tiene un papel importante, con bailes típicos como el Jarabe Tapatío, la Danza de los Viejitos y los Voladores de Papantla.</li>
+        
+            </ul>
+         
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="baile.PNG" class="img-fluid rounded shadow" alt="Gastronomía Mexicana">
+      </div>
+    </div>
+
+
+
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div class="card p-4 bg-accent text-white">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Patrimonio y Turismo Cultural</h4>
+            <p>México cuenta con más de 30 sitios declarados Patrimonio de la Humanidad por la UNESCO, entre ellos:
+<ul>
+              <li>Chichén Itzá</li>
+              <li>Teotihuacán</li>
+              <li>Centro histórico de la Ciudad de México y Xochimilco</li>
+		<li>Ciudad de Guanajuato</li>
+              <li>Palenque y Monte Albán</li>
+            </ul>
+Estos lugares muestran la grandeza histórica y cultural que atrae a millones de turistas cada año.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="piramide.PNG" class="img-fluid rounded shadow" alt="Vestimenta Mexicana">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- COMIDA: tarjetas en lugar de carrusel -->
+  <section id="comida" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Gastronomía Mexicana</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="tacos.PNG" class="card-img-top" alt="Tacos">
+            <div class="card-body">
+              <h5 class="card-title">Tacos</h5>
+              <p class="card-text">Uno de los platillos más representativos del país, con infinidad de variantes regionales.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="mole.PNG" class="card-img-top" alt="Mole">
+            <div class="card-body">
+              <h5 class="card-title">Mole</h5>
+              <p class="card-text">Salsa espesa y compleja, elaborada con chiles, especias y, en algunas versiones, chocolate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="chile.PNG" class="card-img-top" alt="Chiles en nogada">
+            <div class="card-body">
+              <h5 class="card-title">Chiles en Nogada</h5>
+              <p class="card-text">Platillo emblemático de Puebla con los colores de la bandera: verde, blanco y rojo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
